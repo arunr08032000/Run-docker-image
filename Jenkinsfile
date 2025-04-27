@@ -6,12 +6,12 @@ pipeline {
     stages {
        stage('Build') {
            steps {
-               sh 'sudo docker build -t alpine:latest'
+               sh 'sudo docker build -t alpine:3.13.5 .'
            }
        }
        stage('Test') {
            steps {
-               sh 'sudo docker run -it --name test alpine:latest'
+               sh 'sudo docker run -it --name test alpine:3.13.5'
            }
        }
     }
