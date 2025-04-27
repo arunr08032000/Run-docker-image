@@ -11,7 +11,7 @@ pipeline {
        }
        stage('Test') {
            steps {
-               sh 'sudo docker run -it --name test alpine:3.13.5'
+               sh 'sudo docker run --name test alpine:3.13.5'
            }
        }
     }
