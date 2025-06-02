@@ -11,7 +11,7 @@ pipeline {
        }
        stage('Test') {
            steps {
-               sh 'docker run -d --name nginx-container -P nginx'
+               sh 'sudo docker run -d --name nginx-container -p 8081:8085 nginx'
            }
        }
     }
