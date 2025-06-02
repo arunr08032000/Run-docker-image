@@ -6,12 +6,12 @@ pipeline {
     stages {
        stage('Build') {
            steps {
-               sh 'sudo docker build -t nginx:latest .'
+               sh 'sudo docker build -t httpd:latest .'
            }
        }
-       stage('Test') {
+       stage('Run') {
            steps {
-               sh 'sudo docker run -d --name nginx-container -p 8081:8085 nginx'
+               sh 'sudo docker run -d --name httpd-container -p 8082:80 httpd'
            }
        }
     }
